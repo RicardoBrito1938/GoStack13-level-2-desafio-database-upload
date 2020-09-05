@@ -12,17 +12,22 @@ export default class CreateTransactions1599096878973
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',
             type: 'varchar',
-            isNullable: false,
           },
           {
             name: 'type',
             type: 'varchar',
           },
-          { name: 'value', type: 'decimal', precision: 10, scale: 2 },
+          {
+            name: 'value',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
+          },
           {
             name: 'created_at',
             type: 'timestamp',
